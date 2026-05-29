@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,6 +21,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{width:100%;background:var(--cream);font-family:'Cormorant Garamond',serif;color:var(--ink);overflow-x:hidden;}
+
+
 
 /* LANDING */
 #landing{
@@ -265,7 +267,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.65);text-align:center;paddi
 </style>
 </head>
 <body>
-
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 <!-- LANDING -->
 <div id="landing">
   <div class="petals" id="petalsEl"></div>
@@ -484,6 +488,7 @@ function openEnv(){
   var overlay=document.getElementById('overlay');
   var miniCard=document.getElementById('miniCard');
   var main=document.getElementById('main');
+  document.getElementById('bg-music').play();
   landing.classList.add('gone');
   overlay.classList.add('show');
   setTimeout(function(){miniCard.classList.add('risen');},400);
